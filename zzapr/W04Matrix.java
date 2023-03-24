@@ -54,7 +54,7 @@ public class W04Matrix {
         if (dimensionAreTheSame(anotherMatrix)){
             result = new W04Matrix(4,3);
             for (int i = 0; i < elements.length; i++) {
-                for (int j = 0; j < elements[0].length; j++) {
+                for (int j = 0; j < anotherMatrix.elements[0].length; j++) {
                     for (int k = 0; k < elements[0].length; k++) {
                         result.elements[i][j] = elements[i][k] * anotherMatrix.elements[k][j];
                     }
