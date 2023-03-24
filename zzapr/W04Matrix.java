@@ -36,7 +36,7 @@ public class W04Matrix {
         W04Matrix result = null;
 
         if (dimensionAreTheSame(anotherMatrix)){
-            result = new W04Matrix(4,3);
+            result = new W04Matrix(elements.length,elements[0].length);
             for (int i = 0; i < elements.length; i++) {
                 for (int j = 0; j < elements[0].length; j++) {
                     result.elements[i][j] = elements[i][j] + anotherMatrix.elements[i][j];
@@ -51,12 +51,12 @@ public class W04Matrix {
     public W04Matrix multiMatrix(W04Matrix anotherMatrix){
         W04Matrix result = null;
 
-        if (dimensionAreTheSame(anotherMatrix)){
-            result = new W04Matrix(4,3);
+        if (elements[0].length == anotherMatrix.elements.length ){
+            result = new W04Matrix(elements.length,anotherMatrix.elements[0].length);
             for (int i = 0; i < elements.length; i++) {
                 for (int j = 0; j < anotherMatrix.elements[0].length; j++) {
                     for (int k = 0; k < elements[0].length; k++) {
-                        result.elements[i][j] = elements[i][k] * anotherMatrix.elements[k][j];
+                        result.elements[i][j] += elements[i][k] * anotherMatrix.elements[k][j];
                     }
 
                 }
@@ -81,4 +81,3 @@ public class W04Matrix {
         return text;
     }
 }
-
