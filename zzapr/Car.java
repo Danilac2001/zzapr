@@ -1,9 +1,6 @@
-package zzapr.w05;
+package zappr.week06;
 
 public class Car {
-
-
-
     private String manufacture;
     private String type;
     private int pricePaid;
